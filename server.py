@@ -93,9 +93,10 @@ def serve():
     init_db()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     note_pb2_grpc.add_NoteServiceServicer_to_server(NoteServiceServicer(), server)
-
+    
+    host = input("[+] Enter host address (default: 0.0.0.0): ").strip() or "0.0.0.0"
     port = input("[+] Enter port number (default: 50051): ").strip() or "50051"
-    server.add_insecure_port(f"127.0.0.1:{port}")
+    server.add_insecure_port(f"{host}:{port}")
 
     server.start()
     print(f"[+] gRPC Server started on port {port}")
