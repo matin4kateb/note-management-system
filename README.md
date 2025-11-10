@@ -67,5 +67,3 @@ python client.py
 
 **Author:** Mohammad Matin Kateb
 **Course:** Distributed Systems — Fall 2025
-
-```
