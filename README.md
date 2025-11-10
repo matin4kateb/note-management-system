@@ -60,7 +60,7 @@ python client.py
 ## 🧠 Notes
 
 * The server stores all notes in a **SQLite** database file named `notes.db`.
-* The default gRPC address is `127.0.0.1:50051`.
+* The default gRPC server address is `0.0.0.0:50051`.
 * You can easily change the address or port in the source code if needed.
 
 ---
